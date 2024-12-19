@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: fabricioveronez/web-color:green
+          image: fabricioveronez/web-color:blue
           ports:
             - name: http
               containerPort: 80
@@ -36,5 +36,6 @@ spec:
     targetPort: 80
     name: http
     protocol: TCP
-  type: ClusterIP
+    nodePort: 30000
+  type: NodePort
 
